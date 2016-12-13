@@ -1,0 +1,21 @@
+﻿@model BlogSoftUni.Models.Galleryregister
+@{
+    ViewBag.Title = "GalleryView";
+}
+<div class="container">
+<div class="well">
+    <h2>@ViewBag.Title.</h2>
+
+    @using (Html.BeginForm("GalleryView", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+    }
+</div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
