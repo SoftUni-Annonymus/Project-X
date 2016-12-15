@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title Apolon TEAM &trade;</title>
+    <title>Apolon TEAM &trade;@DateTime.Now.Year</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -22,13 +23,11 @@
                     @Html.Partial("_LoginPartial")
                 </div>
             </div>
-        </div>
-    <div class="container body-content"><img src="coffee.jpg">
+        </div>  
         @RenderBody();
         <footer class="pull-right">
             <p>&copy; @DateTime.Now.Year - Apolon Team &trade;</p>
         </footer>
-    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
