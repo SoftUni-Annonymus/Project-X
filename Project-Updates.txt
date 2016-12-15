@@ -1,0 +1,11 @@
+1.Създадох нов Entity Framework модел с име Model1,което служи ,за да мапне
+таблицата от базата данни със снимките! Можем да добавяме ,да махаме  или да променяме елементите.
+2.Създадох ImageGallery Controller,където се управляват :Gallery,Upload и Delete в Базата данни!
+3.Създадох View папка с име ImageGallery ,в която създадох 3 нови View-ta -Delete,Gallery,Upload...където 
+Deletе не е довършен и все още не работи;
+4.Създадох дроп меню(Pictures) в началната страница ,в което има Upload (видимо само за админите) и Gallery(видимо
+за всички)
+5.Промених title на Apolon Team™-2016
+6.Базата от данни дава грешка при добавянето на 2ри файл от рода на (Violation of PRIMARY KEY constraint 'PK_
+ImageGal_7516F4EC093D52FA'. Cannot insert duplicate key in object 'dbo.ImageGallery'.The dublicate value is (0).
+The statement has been terminated.!
