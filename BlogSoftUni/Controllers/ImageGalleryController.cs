@@ -56,7 +56,7 @@ namespace BlogSoftUni.Controllers
             IG.ImageData = data;
             using (MyTableEntities dc = new MyTableEntities())
             {
-                dc.ImageGalleries.Add(IG);
+                dc.ImageGalleries.Add(IG); 
                 dc.SaveChanges();
             }
             return RedirectToAction("Gallery");

@@ -3,24 +3,29 @@
 @{
     ViewBag.Title = "Upload";
 }
+<div class="container">
+    <div class="well">
+        <h2>Upload</h2>
+        @using (Html.BeginForm("Upload", "ImageGallery", FormMethod.Post, new {enctype = "multipart/form-data"}))
+        {
+            @Html.ValidationSummary(true)
 
-<h2>Upload</h2>
-@using (Html.BeginForm("Upload", "ImageGallery", FormMethod.Post, new {enctype = "multipart/form-data"}))
-{
-    @Html.ValidationSummary(true)
-    <table>
-        <tr>
-            <td>Select File : </td>
-            <td>
-                @Html.TextBoxFor(Model1 => Model1.FIle, new {type = "file"})
-                @Html.ValidationMessage("CustomError")
-            </td>
-            <td>
-                <input type="submit" value="Upload" />
-            </td>
-        </tr>
-     </table>
-}
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
-}
+            <table>
+                <tr>
+                    <td>Select File : </td>
+                    <td>
+                        @Html.TextBoxFor(Model1 => Model1.FIle, new {type = "file"})
+                        @Html.ValidationMessage("CustomError")
+                    </td>
+                    <td>
+                        <input type="submit" value="Upload"/>
+                    </td>
+                </tr>
+            </table>
+        }
+        </div>
+    </div>
+        
+        @section Scripts{
+            @Scripts.Render("~/bundles/jqueryval")
+        }
