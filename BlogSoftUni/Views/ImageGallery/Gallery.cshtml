@@ -4,11 +4,12 @@
     ViewBag.Title = "Gallery";
 }
 
-<h2>Gallery</h2> 
-<p>
+ <h2 style ="text-align: center; font-family: Impact; letter-spacing: 10px; width: 30%; margin: auto; margin-top: 40px; ">Gallery</h2> 
+<p style="width: 50%; margin: auto; margin-top: 20px; background-color: #000; text-align:center;">
     @if (User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Upload New", "Upload")
+        @Html.ActionLink("Upload New", "Upload", null,
+        new { @style="font-size:20px; color:#fff; font-family:Impact; letter-spacing:3px;  "})
     }
 </p>
 <div class="container">
@@ -33,13 +34,15 @@
                 }
             }
         </table>
-        <p>
-           
-        </p>
+       
 
     </div>
 </div>
-@if (User.IsInRole("Admin"))
-            {
-    @Html.ActionLink("Delete", "Delete")
-}
+     
+               @if (User.IsInRole("Admin"))
+               {
+                   <p style ="width: 50%; margin: auto; margin-top: 20px; background-color: #000; text-align:center;">
+                       @Html.ActionLink("Delete", "Delete", null,
+        new { @style = "font-size:20px; color:#fff; font-family:Impact; letter-spacing:3px;  " })
+                       </p>
+               }

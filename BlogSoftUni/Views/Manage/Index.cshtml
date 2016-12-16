@@ -5,14 +5,14 @@
 
 <div class="container">
     <div class="well">
-        <h2>@ViewBag.Title.</h2>
+        <h2 style="color:#fff;">@ViewBag.Title</h2>
 
         <p class="text-success">@ViewBag.StatusMessage</p>
         <div>
-            <h4>Change your account settings</h4>
+            <h4 style="color:#fff;">Change your account settings</h4>
             <hr />
             <dl class="dl-horizontal">
-                <dt>Password:</dt>
+                <dt style="color:#fff;">Password:</dt>
                 <dd>
                     [
                     @if (Model.HasPassword)
@@ -25,8 +25,8 @@
                     }
                     ]
                 </dd>
-                <dt>External Logins:</dt>
-                <dd>
+                <dt style="color:#fff;">External Logins:</dt>
+                <dd >
                     @Model.Logins.Count [
                     @Html.ActionLink("Manage", "ManageLogins") ]
                 </dd>
@@ -58,12 +58,7 @@
                     }
                 </dd>
                 *@
-                <dt>Two-Factor Authentication:</dt>
-                <dd>
-                    <p>
-                        There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                        for details on setting up this ASP.NET application to support two-factor authentication.
-                    </p>
+              
                     @*@if (Model.TwoFactor)
                     {
                         using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))

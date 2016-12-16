@@ -5,20 +5,20 @@
 }
 <div class="container">
     <div class="well">
-        <h2>Upload</h2>
+        <h2 style="color:#fff">Upload</h2>
         @using (Html.BeginForm("Upload", "ImageGallery", FormMethod.Post, new {enctype = "multipart/form-data"}))
         {
             @Html.ValidationSummary(true)
 
-            <table>
+            <table style="width:80%; margin:auto;">
                 <tr>
-                    <td>Select File : </td>
+                   
                     <td>
-                        @Html.TextBoxFor(Model1 => Model1.FIle, new {type = "file"})
+                        @Html.TextBoxFor(Model1 => Model1.FIle, new { type = "file" })
                         @Html.ValidationMessage("CustomError")
                     </td>
                     <td>
-                        <input type="submit" value="Upload"/>
+                        <input class="btn btn-success" type="submit" value="Upload" />
                     </td>
                 </tr>
             </table>
