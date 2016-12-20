@@ -305,6 +305,7 @@
     <Content Include="Views\ImageGallery\Gallery.cshtml" />
     <Content Include="Views\ImageGallery\Upload.cshtml" />
     <Content Include="Views\ImageGallery\Delete.cshtml" />
+    <Content Include="Views\Shared\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

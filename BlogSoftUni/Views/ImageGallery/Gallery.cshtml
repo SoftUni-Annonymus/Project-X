@@ -18,15 +18,15 @@
         <table>
             @{
                 int j = 0;
-                for (int i = 0; i < Model.Count(); i++)
+                for (int i = 0; i <  Model.Count(); i++)
                 {
                     j = i;
                     <tr>
-                        @*I Have done this for show 4 images in a Row*@
-                        @while (j < i + 4 && j < Model.Count())
-                {
+                        @*I Have done this to show 4 images in a Row*@
+                        @while (j < i + 1 && j < Model.Count())
+                        {
                             <td>
-                                <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData,0, Model[j].ImageData.Length)" width="300" />
+                                <img width="500" style="padding-top: 20px; padding-left:140px;" src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData, 0, Model[j].ImageData.Length)" />
                             </td>
                             j++;
                         }
@@ -39,10 +39,4 @@
     </div>
 </div>
      
-               @if (User.IsInRole("Admin"))
-               {
-                   <p style ="width: 50%; margin: auto; margin-top: 20px; background-color: #000; text-align:center;">
-                       @Html.ActionLink("Delete", "Delete", null,
-        new { @style = "font-size:20px; color:#fff; font-family:Impact; letter-spacing:3px;  " })
-                       </p>
-               }
+              

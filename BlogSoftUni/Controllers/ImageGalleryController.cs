@@ -12,6 +12,7 @@ namespace BlogSoftUni.Controllers
 {
     public class ImageGalleryController : Controller
     {
+        int i=0;
         // GET: ImageGallery
         public ActionResult Index()
         {
@@ -49,6 +50,8 @@ namespace BlogSoftUni.Controllers
                 ModelState.AddModelError("CustomError", "File type allowed: jpeg and gif");
                 return View();
             }
+            
+        
             IG.FileName = IG.FIle.FileName;
             IG.ImageSize = IG.FIle.ContentLength;
             byte[] data = new byte[IG.FIle.ContentLength];
@@ -56,8 +59,9 @@ namespace BlogSoftUni.Controllers
             IG.ImageData = data;
             using (MyTableEntities dc = new MyTableEntities())
             {
-                dc.ImageGalleries.Add(IG); 
+                dc.ImageGalleries.Add(IG);                
                 dc.SaveChanges();
+                
             }
             return RedirectToAction("Gallery");
         }
@@ -66,7 +70,7 @@ namespace BlogSoftUni.Controllers
         [ActionName("Delete")]
         public ActionResult Delete(int? id)
         {
-            return View();
+                return View(); 
         }
     }
 }
