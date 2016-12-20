@@ -37,7 +37,7 @@ namespace BlogSoftUni.Controllers
         [HttpPost]
         public ActionResult Upload(ImageGallery IG)
         {
-            //Apply Validation mere
+            //Apply Validation Here
            
             if (IG.FIle.ContentLength > (3*1024*1024))
             {
