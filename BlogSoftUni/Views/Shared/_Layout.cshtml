@@ -1,37 +1,49 @@
 ﻿<!DOCTYPE html>
-<html>
+<html style="padding-bottom:0">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apolon TEAM &trade;@DateTime.Now.Year</title>
-    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container" >
-                <div class="navbar-header">
-                    
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                
-                <div class="navbar-collapse collapse">
-                    @Html.Partial("_LoginPartial")
-                </div>
-                
+<body style="padding-bottom:0; background-size: 1200px 1000px" background="http://wallpaperflix.com/wp-content/uploads/2016/07/gym-wallpaper-workout.jpg">
+    <div style="border:2px dotted white;"class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-        </div>  
-   
-        @RenderBody();
-        <footer class="pull-right">
-            <p>&copy; @DateTime.Now.Year - Apolon Team &trade;</p>
-        </footer>
+
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+    </div>
+
+    @RenderBody()
+    <footer style=" border: 2px dotted white; margin-top: 100px; height: 155px; background-color: #000;">
+
+        <div style="padding-top:40px;">
+            <div style="float:right;">
+
+                <a href=" http />/www.visualstuido.com/">  <img width="50px" height="50px" src="http://i.imgur.com/AQfHTyP.png"></a>
+                <a href=" https />/www.w3.org/html/logo/"><img width="50px" height="50px" src="http://i.imgur.com/HKJAgdg.png"></a>
+                <a href=" http />/www.css3.info/"><img width="50px" height="50px" src="https://ohdoylerules.com/content/images/css3.svg"></a>
+                <a href=" http />/www.javascript.com/"><img img width="50px" height="50px" src="http://i.imgur.com/6Z0ptXK.png"></a>
+
+            </div>
+        </div>
+        <p style="text-align:center; color:#fff; width:30%; margin:auto;">&copy; @DateTime.Now.Year - Apolon Team &trade;</p>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

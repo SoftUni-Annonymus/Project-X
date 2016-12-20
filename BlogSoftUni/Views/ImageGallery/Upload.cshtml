@@ -4,8 +4,8 @@
     ViewBag.Title = "Upload";
 }
 <div class="container">
-    <div class="well">
-        <h2 style="color:#fff">Upload</h2>
+    <div style="height:210px;"class="well">
+        <h2 style="font-family:Impact; margin-bottom: 30px; color:#fff">Upload</h2>
         @using (Html.BeginForm("Upload", "ImageGallery", FormMethod.Post, new {enctype = "multipart/form-data"}))
         {
             @Html.ValidationSummary(true)
